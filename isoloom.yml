@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://www.isoloom.com/schema/v1.json
+# GOAD-Mini (Game of Active Directory, by Orange Cyberdefense): one domain on one Windows
+# server. Isoloom builds the machine; GOAD's own playbooks build the lab from a controller.
+version: 1
+name: goad-mini
+
+networks:
+  lab: { cidr: 192.168.56.0/24 }
+
+machines:
+  dc01:   # kingslanding: sevenkingdoms.local
+    networks: { lab: 10 }
+    services: [{ port: 53, name: dns }, { port: 88, name: kerberos }, { port: 389, name: ldap }, { port: 445, name: smb }]
+    resources: { cpus: 2, memory_mb: 3000 }
+    vm:
+      os: windows-server-2019
+      provision: [vagrant/ConfigureRemotingForAnsible.ps1]
+
+provision:
+  - ansible: ansible/goad-mini.yml
+    inventory:
+      - ad/GOAD-Mini/data/inventory
+      - ad/GOAD-Mini/providers/isoloom/inventory
+      - globalsettings.ini
+    requirements: ansible/requirements_311.yml
