@@ -15,6 +15,9 @@ cd .isoloom/vagrant && vagrant up
 About 3 GB of memory plus 1 GB for the controller. Lab guide: the
 [GOAD documentation](https://orange-cyberdefense.github.io/GOAD/).
 
+**Tested:** built end to end on VirtualBox (KINGSLANDING plus the controller), 0 failed tasks:
+the domain, its OUs, groups and users, and GOAD's vulnerabilities.
+
 ## Licence
 
 GPL-3.0, as GOAD ([LICENSE](LICENSE)). This lab is deliberately vulnerable: keep it isolated.
