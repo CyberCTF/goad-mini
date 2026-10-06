@@ -1,0 +1,16 @@
+{
+  "title": "GOAD-Mini",
+  "description": "The smallest Game of Active Directory: one domain (sevenkingdoms.local) on a single Windows Server 2019 domain controller, for practising core AD attacks without a full range.",
+  "question": "Reach Domain Admin on the domain controller.",
+  "category": "NETWORK",
+  "difficulty": 2,
+  "evidence_kind": "SECRET",
+  "providers": [
+    "virtualbox",
+    "vmware_desktop",
+    "parallels",
+    "vmware_esxi",
+    "aws",
+    "azure"
+  ]
+}
