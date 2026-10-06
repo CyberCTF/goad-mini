@@ -23,3 +23,6 @@ provision:
       - ad/GOAD-Mini/providers/isoloom/inventory
       - globalsettings.ini
     requirements: ansible/requirements_311.yml
+
+message: |
+  GOAD-Mini is up: kingslanding (sevenkingdoms.local) at {{ machines.dc01.addresses.lab }}.
