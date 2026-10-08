@@ -9,6 +9,7 @@
     "virtualbox",
     "vmware_desktop",
     "parallels",
+    "qemu",
     "vmware_esxi",
     "aws",
     "azure"
