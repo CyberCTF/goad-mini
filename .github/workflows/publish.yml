@@ -18,7 +18,7 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
-      - uses: isoloom/isoloom@v0.8.1
+      - uses: isoloom/isoloom@v0.10.1
       - run: isoloom generate
       - uses: CyberCTF/publish-lab-action@v1
         with:
